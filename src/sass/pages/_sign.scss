@@ -1,0 +1,61 @@
+.content-login{
+  width: 100%;
+  min-height: 100vh;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  padding: 15px;
+  background: #f2f2f2;
+  .wrap-login{
+    width: 370px;
+    background: #fff;
+    border-radius: 10px;
+    overflow: hidden;
+    padding: 35px 25px 20px;
+    box-shadow: 0 5px 10px 0px rgba(0, 0, 0, 0.1);
+    -moz-box-shadow: 0 5px 10px 0px rgba(0, 0, 0, 0.1);
+    -webkit-box-shadow: 0 5px 10px 0px rgba(0, 0, 0, 0.1);
+    -o-box-shadow: 0 5px 10px 0px rgba(0, 0, 0, 0.1);
+    -ms-box-shadow: 0 5px 10px 0px rgba(0, 0, 0, 0.1);
+  }
+  .form-login{
+    position: relative;
+    margin: 0 auto;
+    h4{
+      display: block;
+      font-size: 30px;
+      color: #333333;
+      margin: 0 0 10px;
+      font-weight: 900;
+      line-height: 1.2;
+      text-align: center;
+    }
+    .card{
+      border: 0;
+      margin: 0;
+    }
+    .card-body,
+    .card-footer{
+      padding: 0;
+    }
+    .ui-button{
+      width: 100%;
+    }
+    .btn-send{
+      display: block;
+      width: 100%;
+      border: 0;
+      margin-top: 10px;
+      border-radius: 8px;
+      padding: 8px 0;
+      background-color: #0db776;
+      text-transform: uppercase;
+      color: #fff;
+    }
+  }
+}

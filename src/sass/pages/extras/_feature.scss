@@ -1,0 +1,573 @@
+.section__child {
+  position: relative;
+  width: 100%;
+  min-height: 710px;
+  background: {
+    color: #f4f4f4;
+    image: url(/img/landing/bg_section1bottom.png);
+    position: center bottom;
+    repeat: no-repeat;
+    size: contain;
+  };
+  .bg-child{
+    width: 710px;
+    margin: 0 auto;
+    text-align: center;
+    .desktop{
+      display: none;
+    }
+    .mobile{
+      display: block;
+      margin: 0 auto;
+    }
+  }
+  .fp-tableCell{
+    position: relative;
+  }
+  .title{
+    @include fontNunito(35px, 900);
+    line-height: 35px;
+    color: $color-anda-primario;
+    margin: 25px 0 0;
+  }
+  @media (min-width: 992px) {
+    .bg-child{
+      .mobile{
+        display: none;
+      }
+      .desktop{
+        display: block;
+      }
+    }
+  }
+  @media #{$mobile-both} {
+    min-height: 400px;
+    .bg-child{
+      width: 100%;
+      .mobile{
+        width: 290px;
+      }
+    }
+    .title{
+      font-size: 20px;
+      line-height: 20px;
+    }
+  }
+  @media #{$tablet-mobile} {
+    .content--next{
+      .btn--next{
+        .arrow{
+          width: 20px;
+          height: 20px;
+          border-color: $color-anda-primario !important;
+        }
+      }
+      .text{
+        display: none;
+      }
+    }
+  }
+}
+.features--fixed{
+  width: 35px;
+  height: 230px;
+  position: fixed;
+  top: 50%;
+  right: 14px;
+  z-index: 99;
+  margin-top: -115px;
+  .nav {
+    $sizeButton: 35px;
+    > li{
+      width: $sizeButton;
+      height: $sizeButton;
+      display: block;
+      > button{
+        width: $sizeButton;
+        padding: 0;
+        margin: 0;
+        border: 0;
+        height: $sizeButton;
+        display: block;
+        background-color: transparent;
+        position: relative;
+        @include fontNunito(12px, 700);
+        opacity: 0.5;
+        color: $color-anda-primario;
+        img{
+          width: 35px;
+          height: 35px;
+          display: block;
+          transition: all .25s;
+        }
+        span{
+          position: absolute;
+          top: 0;
+          opacity: 0;
+          right: 45px;
+          text-align: right;
+          width: 160px;
+          height: $sizeButton;
+          line-height: $sizeButton;
+          @each $name, $color in $color-feature {
+            &.color--#{$name} {
+              color: $color;
+            }
+          }
+        }
+        &:hover, &:focus{
+          outline: 0;
+          opacity: 1;
+          background-color: transparent;
+          img {
+            transform: scale(1.1);
+          }
+        }
+        &:hover{
+          span {
+            animation-duration: .6s;
+            animation-fill-mode: both;
+            animation-name: fadeIn;
+          }
+        }
+        &.active{
+          opacity: 1;
+          span{
+            opacity: 1;
+          }
+        }
+      }
+      & + li{
+        margin-top: 15px;
+      }
+    }
+  }
+  @media #{$mobile-both} {
+    right: 12px;
+  }
+  @media #{$mobile-both} {
+    display: none;
+  }
+}
+.content--next{
+  position: absolute;
+  bottom: 20px;
+  width: 100%;
+  z-index: 10;
+  text-align: center;
+  .btn--next{
+    padding: 2px;
+    border: 0;
+    background-color: transparent;
+    @include fontNunito(16px, 700);
+    .arrow{
+      display: block;
+      width: 12px;
+      margin: 0 auto;
+      height: 12px;
+      position: relative;
+      border-top: 2px solid transparent;
+      border-right: 2px solid transparent;
+      transform: rotate(135deg);
+      animation-name: animateArrow;
+      animation-duration: 1.5s;
+      animation-fill-mode: both;
+      animation-iteration-count: infinite;
+    }
+    @each $name, $color in $color-feature {
+      &.color--#{$name} {
+        color: $color;
+        .arrow{
+          border-color: $color;
+        }
+      }
+    }
+  }
+}
+@keyframes animateArrow {
+  0% {
+    bottom: 0;
+  }
+  50% {
+    bottom: -10px;
+  }
+  100% {
+    bottom: 0;
+  }
+}
+.section__features{
+  position: relative;
+  width: 100%;
+  &.bg_bottom{
+    background: {
+      image: url(/img/landing/bg_section1.png);
+      position: center bottom;
+      repeat: no-repeat;
+      size: contain;
+    };
+  }
+  @media #{$tablet-both} {
+    .content--next{
+      display: none;
+    }
+  }
+  .btn--video{
+    position: absolute;
+    left: 50%;
+    margin-left: -34px;
+    bottom: 15px;
+  }
+  .section__title{
+    color: $black-light;
+    width: 340px;
+    float: left;
+    position: relative;
+    height: 360px;
+    h3{
+      @include fontNunito(60px, 700);
+      line-height: 60px;
+      margin: 0 0 20px;
+    }
+    h4{
+      @include fontNunito(24px, 700);
+      line-height: 24px;
+      margin: 0 0 0px;
+    }
+    p{
+      margin: 0;
+    }
+    img{
+      display: none;
+      width: 35.5px;
+      height: auto;
+      margin-right: auto;
+      margin-bottom: 12px;
+    }
+    .vertical-center{
+      position: relative;
+      top: 50%;
+      transform: translateY(-50%);
+    }
+    @each $name, $color in $color-feature {
+      &.color--#{$name} {
+        h3, h5 {
+          color: $color;
+        }
+      }
+    }
+    @media #{$mobile-both} {
+      height: auto;
+      font-size: 12px;
+      margin-bottom: 30px;
+      width: 100%;
+      .vertical-center{
+        top: 0;
+        transform: none;
+      }
+      img{
+        display: block;
+      }
+      h3{
+        font-size: 38px;
+        line-height: 38px;
+        margin-bottom: 15px;
+      }
+      h4{
+        font-size: 16px;
+        line-height: 16px;
+      }
+    }
+  }
+  @media #{$mobile-both} {
+    &:nth-child(2n) {
+      .section__title {
+        width: 100%;
+        text-align: left;
+        padding: 0 15px;
+        img{
+          float: left;
+        }
+      }
+    }
+    &:nth-child(2n + 1) {
+      .section__title {
+        width: 100%;
+        text-align: right;
+        padding: 0 15px;
+        img{
+          float: right;
+        }
+      }
+    }
+  }
+  @media #{$tablet-both} {
+    width: 100%;
+    &:nth-child(2n) {
+      .section__title {
+        width: 100%;
+        text-align: left;
+        padding: 0 30px;
+        img{
+          float: left;
+        }
+      }
+    }
+    &:nth-child(2n + 1) {
+      .section__title {
+        width: 100%;
+        text-align: right;
+        padding: 0 30px;
+        img{
+          float: right;
+        }
+      }
+    }
+  }
+  .section__image{
+    $w: 750px;
+    width: $w;
+    float: left;
+    position: relative;
+    .b-desktop{
+      width: 100%;
+      margin: 0 auto;
+      position: relative;
+      .b_left{
+        float: left;
+        width: 50%;
+        position: relative;
+        height: auto;
+        margin-top: 20px;
+        padding-right: 50px;
+        @media #{$tablet-both} {
+          padding-right: 20px;
+        }
+        .slide--img{
+          float: right;
+          height: 300px;
+        }
+        &.message-img{
+
+        }
+        &.calls-img{
+          padding-right: 65px;
+          margin-top: 75px;
+          .slide--img{
+            height: 210px;
+          }
+        }
+        &.symbols-img{
+          margin-top: 75px;
+          .slide--img{
+            height: 210px;
+          }
+        }
+        &.history-img{
+          margin-top: 75px;
+          .slide--img{
+            height: 230px;
+          }
+        }
+        &.safezone-img{
+          margin-top: 75px;
+          .slide--img{
+            height: 230px;
+          }
+        }
+        @media #{$mobile-both} {
+          &.message-img{
+            margin-top: 15px;
+            padding-right: 10px;
+            .slide--img{
+              height: 130px;
+            }
+          }
+          &.calls-img{
+            padding-right: 42px;
+            margin-top: 36px;
+            .slide--img{
+              height: 90px;
+            }
+          }
+          &.symbols-img{
+            margin-top: 36px;
+            padding-right: 10px;
+            .slide--img{
+              height: 90px;
+            }
+          }
+          &.history-img{
+            margin-top: 36px;
+            padding-right: 10px;
+            .slide--img{
+              height: 110px;
+            }
+          }
+          &.safezone-img{
+            margin-top: 36px;
+            padding-right: 10px;
+            .slide--img{
+              height: 110px;
+            }
+          }
+        }
+        @media #{$tablet-both} {
+          // padding-left: 20px;
+          &.message-img{
+            margin-top: 10px;
+            .slide--img{
+              height: 290px;
+            }
+          }
+          &.calls-img{
+            padding-right: 60px;
+            margin-top: 68px;
+            .slide--img{
+              height: 190px;
+            }
+          }
+          &.symbols-img{
+            margin-top: 68px;
+            .slide--img{
+              height: 190px;
+            }
+          }
+          &.history-img{
+            margin-top: 68px;
+            .slide--img{
+              height: 210px;
+            }
+          }
+          &.safezone-img{
+            margin-top: 68px;
+            .slide--img{
+              height: 210px;
+            }
+          }
+        }
+      }
+      .b_center{
+        top: 50%;
+        position: absolute; 
+        margin-top: -90px;
+        left: 50%;
+        margin-left: -50px;
+        display: block;
+        img{
+          height: 180px;
+        }
+        @media #{$mobile-both} {
+          margin-top: -40px;
+          margin-left: -35px;
+          img{
+            height: 80px;
+          }
+        }
+        @media #{$tablet-both} {
+          margin-top: -85px;
+          img{
+            height: 170px;
+          }
+        }
+      }
+      .b_right{
+        float: left;
+        width: 50%;
+        height: auto;
+        position: relative;
+        padding-left: 50px;
+        .slide--img{
+          height: 360px;
+        }
+        @media #{$mobile-both} {
+          padding-left: 10px;
+          .slide--img{
+            height: 160px;
+          }
+        }
+        @media #{$tablet-both} {
+          padding-left: 20px;
+          .slide--img{
+            height: 330px;
+          }
+          &.calls-img{
+            padding-left: 45px;
+          }
+        }
+        &.calls-img{
+          .slide--img{
+            // height: 220px;
+          }
+        }
+      }
+    }
+    @media #{$mobile-both}  {
+      width: 100%;
+    }
+    @media #{$tablet-both} {
+      width: 100%;
+      margin: 0 auto;
+      .b-desktop{
+        width: 710px;
+        margin: 0 auto;
+      }
+    }
+  }
+}
+
+.points{
+  position: absolute;
+  width: 55px;
+  top: 50%;
+  margin-top: -5px;
+  left: 50%;
+  margin-left: -22.5px;
+  .nav{
+    > li{
+      float: left;
+      width: 10px;
+      height: 10px;
+      border-radius: 50%;
+      opacity: 0;
+      & + li{
+        margin-left: 5px;
+      }
+    }
+  }
+  @each $name, $color in $color-feature {
+    &.points--#{$name} {
+      .nav {
+        > li {
+          $baseSecond: .5s;
+          @for $i from 1 through 4 {
+            &:nth-child(#{$i}) {
+              background-color: rgba($color, 1 - 0.15*($i - 1));
+              animation: fadeInPoint 2s ($i - 1)*$baseSecond infinite reverse;
+            }
+          }
+        }
+      }
+    }
+  }
+  @media #{$mobile-both} {
+    display: none;
+  }
+  @media #{$tablet-both} {
+    display: none;
+  }
+  // @media #{$tablet-portrait} {
+  //   display: none;
+  // }
+}
+
+@keyframes fadeInPoint {
+  0% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}

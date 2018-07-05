@@ -1,0 +1,32 @@
+$tablet-ios-portrait: "only screen  and (min-width: 768px) and (max-width: 1024px) and (orientation: portrait) and (-webkit-min-device-pixel-ratio: 2)";
+$tablet-ios-landscape: "only screen  and (min-width: 768px) and (max-width: 1024px) and (orientation: landscape) and (-webkit-min-device-pixel-ratio: 2)";
+$tablet-ios-both: "only screen  and (min-width: 768px) and (max-width: 1024px) and (-webkit-min-device-pixel-ratio: 2)";
+
+$tablet-android-portrait: "(max-width: 800px) and (orientation: portrait) and (-webkit-min-device-pixel-ratio: 2)";
+$tablet-android-landscape: "(max-width: 1280px) and (orientation: landscape) and (-webkit-min-device-pixel-ratio: 2)";
+$tablet-android-both: "(min-width: 800px) and (max-width: 1280px) and (-webkit-min-device-pixel-ratio: 2)";
+
+$tablet-portrait: "(min-width: 768px) and (max-width: 1280px) and (orientation: portrait)";
+$tablet-landscape: "(min-width: 768px) and (max-width: 1280px) and (orientation: landscape)";
+$tablet-both: "(min-width: 768px) and (max-width: 1280px)";
+$mobile-both: "(max-width: 767px)";
+$tablet-mobile: "(max-width: 1280px)";
+
+$color-complaints: #616B7E;
+$color-black-light: #B2B2B2;
+
+$smartwatch: (
+  electric: (#4E79C3, #FF8533),
+  purple: (#60379E, #42D3F4),
+  lemon: (#69BA5E, #F1D733),
+  black: (#333333, #9A8FB1)
+);
+
+$smartwatchStock: (
+  black: (#333333, #9A8FB1, 'black-shadow'),
+  electric: (#4E79C3, #FF8533, 'electric-blue'),
+  purple: (#60379E, #42D3F4, 'purple-berry'),
+  lemon: (#69BA5E, #F1D733, 'lemon-lime')
+);
+
+$slide-feature: ('symbols', 'message', 'calls', 'history', 'safezone');

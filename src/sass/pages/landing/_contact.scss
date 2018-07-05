@@ -1,0 +1,245 @@
+.section__contact{
+  width: 100%;
+  position: relative;
+  height: auto !important;
+  .fp-tableCell{
+    height: auto !important;
+  }
+  .content--top{
+    background: {
+      position: center;
+      repeat: no-repeat;
+      size: cover;
+      image: url(/img/bg_contact.png);
+    };
+    position: relative;
+    height: 360px;
+    width: 100%;
+    color: #fff;
+    padding-top: 55px;
+    @media #{$tablet-portrait}{
+      background: {
+        image: url(/img/bg_contact_tablet.png);
+      }
+    }
+    @media #{$mobile-both}{
+      height: auto;
+      padding: 70px 0 50px;
+      background: {
+        image: url(/img/bg_contact_mobile.png);
+      }
+    }
+    h4{
+      font-size: 18px;
+      font-weight: 700;
+      text-transform: uppercase;
+      font-family: 'Nunito', sans-serif;
+      margin: 0 0 25px;
+    }
+    .b__newsletter{
+      width: 260px;
+      p{
+        margin-bottom: 20px;
+        @media #{$mobile-both} {
+          font-size: 12px;
+        }
+      }
+      .ui-textbox{
+        width: 255px;
+        margin-bottom: 0;
+        .ui-textbox__input{
+          padding: 4px 12px;
+        }
+      }
+      .ui-button{
+        margin-top: 20px;
+        font-size: 14px;
+        padding: 8px 18px;
+        color: $color-anda-primario;
+        border-radius: 6px;
+        font-family: 'Nunito', sans-serif;
+        font-weight: 900;
+        background-color: #fff;
+      }
+      .invalidInput{
+        font-size: 12px;
+        color: #fff;
+        padding-left: 12px;
+      }
+      @media #{$mobile-both}{
+        width: 100%;
+        padding: 0 15px;
+        text-align: center;
+        p{
+          padding: 0 25px;
+        }
+        .ui-textbox{
+          width: 100%;
+        }
+      }
+      @media #{$tablet-both}{
+        width: 100%;
+        .ui-textbox{
+          width: 100%;
+        }
+      }
+    }
+    .b__info{
+      padding-left: 90px;
+      .nav{
+        > li{
+          > a{
+            font-weight: 700;
+            font-size: 16px;
+            font-family: 'Nunito', sans-serif;
+            background-color: transparent;
+            border: 0;
+            padding: 0;
+            color: #fff;
+            display: block;
+            &:hover, &:focus{
+              color: #fff;
+              text-decoration: none;
+            }
+          }
+          & + li{
+            margin-top: 10px;
+          }
+        }
+      }
+      @media #{$mobile-both}{
+        padding-left: 0;
+      }
+      @media #{$tablet-both}{
+        padding-left: 0;
+      }
+    }
+    .b__contact{
+      padding: 0;
+      .nav__contact{
+        > li{
+          position: relative;
+          > a{
+            background-color: transparent;
+            border: 0;
+            color: #fff;
+            padding: 0;
+            display: inline-block;
+            *display: inline;
+            position: relative;
+            height: 26px;
+            line-height: 26px;
+            &:hover, &:focus{
+              text-decoration: none;
+            }
+            padding-left: 32px;
+          }
+          .icon{
+            width: 22px;
+            line-height: 22px;
+            position: absolute;
+            top: 0;
+            left: 0;
+            img{
+              display: inline-block;
+              width: 100%;
+            }
+          }
+          & + li{
+            margin-top: 10px;
+          }
+        }
+      }
+      .nav__social{
+        margin-top: 90px;
+        > li{
+          float: left;
+          & + li{
+            margin-left: 10px;
+          }
+          > a{
+            width: 34px;
+            height: 34px;
+            padding: 1px;
+            display: block;
+            background-color: transparent;
+            img{
+              width: 100%;
+              height: auto;
+              display: block;
+            }
+            &:hover, &:focus{
+              outline: 0;
+              text-decoration: none;
+              background-color: transparent;
+            }
+          }
+        }
+      }
+      @media (min-width: 992px) {
+        padding-left: 30px;
+      }
+    }
+
+    @media #{$mobile-both}{
+      .content__info{
+        margin-top: 50px;
+
+      }
+      .content__contact{
+        margin-top: 50px;
+      }
+    }
+
+    @media #{$tablet-portrait} {
+      height: 750px;
+      padding-top: 70px;
+      .content__newsletter{
+        width: 100%;
+        margin-bottom: 90px;
+        .b__newsletter{
+          text-align: center;
+          width: 380px;
+          margin: 0 auto;
+        }
+        .ui-textbox{
+          width: 280px;
+          margin: 0 auto;
+          margin-top: 30px;
+        }
+      }
+      .content__info{
+        width: 50%;
+        .b__info{
+          padding-left: 30px;
+          .link__book{
+            margin-top: 36px;
+          }
+        }
+      }
+      .content__contact{
+        width: 50%;
+      }
+    }
+  }
+  .content--bottom{
+    position: relative;
+    width: 100%;
+    text-align: center;
+    color: $color-anda-primario;
+    min-height: 95px;
+    padding: 30px 0 0;
+    font-size: 10px;
+    font-weight: 900;
+    text-transform: uppercase;
+    font-family: 'Nunito', sans-serif;
+    h5{
+      font-size: 16px;
+      line-height: 16px;
+      margin: 0 0 5px;
+    }
+  }
+}
+.modal__newsletter{
+  
+}

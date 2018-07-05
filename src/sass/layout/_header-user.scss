@@ -1,0 +1,162 @@
+.header-user{
+  height: 60px;
+  padding: 0 15px;
+  text-align: center;
+  width: 100%;
+  z-index: 120;
+  position: relative;
+  background: #fff;
+  border: 0;
+  border-bottom: 1px solid rgba(0,0,0,.2);
+  .b-left{
+    float: left;
+  }
+  .show_menu{
+    position: absolute;
+    height: 100%;
+    top: 0;
+    left: 0;
+    border: 0;
+    width: 60px;
+    border-right: 1px solid rgba(0,0,0,.2);
+    color: rgba(0,0,0,0.54);
+    text-align: center;
+    background-color: transparent;
+    line-height: 60px;
+    i{
+      display: block;
+      margin: 0 auto;
+    }
+    &:hover, &:focus{
+      outline: 0;
+      background-color: transparent;
+    }
+  }
+  .b-right{
+    float: right;
+    margin-right: -15px;
+  }
+  .nav_option_layout{
+    position: relative;
+    margin-top: 9px;
+    > li{
+      float: left;
+      & + li{
+        margin-left: 10px;
+      }
+    }
+  }
+  .anda-logo{
+    width: 50px;
+    height: 50px;
+    margin-top: 10px;
+    float: left;
+    display: block;
+    img{
+      width: 100%;
+      display: block;
+      height: auto;
+    }
+    &:hover, &:focus{
+      cursor: pointer;
+      outline: 0;
+      background-color: transparent;
+    }
+  }
+  .nav_opt{
+    > li{
+      position: relative;
+      height: 60px;
+      float: left;
+      & + li{
+        margin-left: 0;
+      }
+      .btn-logout{
+        width: 60px;
+        height: 60px;
+        display: block;
+        border: 0;
+        padding: 0;
+        background-color: transparent;
+        border-left: 1px solid #858598;
+        &:hover, &:focus{
+          outline: 0;
+          cursor: pointer;
+        }
+      }
+    }
+  }
+  .picture-user{
+    position: relative;
+    display: block;
+    border: 0;
+    float: right;
+    padding: 0 8px;
+    overflow: hidden;
+    color: #858598;
+    height: 60px;
+    line-height: 60px;
+    margin: 0;
+    .name-user{
+      display: block;
+      font-weight: 700;
+      margin: 0;
+      position: relative;
+      i{
+        font-size: 16px;
+        position: relative;
+        float: right;
+      }
+    }
+    &:hover{
+      cursor: pointer;
+      outline: 0;
+      color: #5c6bc0;
+      .img_profile{
+        color: #5c6bc0;
+      }
+      //background-color: rgb(63, 73, 99);
+    }
+  }
+  /*.name-user{
+    margin: 9px 0 0;
+    color: #fff;
+    font-weight: 300;
+    font-size: 17px;
+  }*/
+  .email-user{
+    color: #eee;
+    font-weight: 300;
+    font-size: 12px;
+    margin: 7px 0 0;
+    i{
+      position: relative;
+      float: none;
+      top: 4px;
+    }
+  }
+}
+.header-logo{
+  width: 100%;
+  padding: 10px;
+  height: 60px;
+  background-color: #6E56A0;//#6e57a1;
+  border-bottom: 1px solid #d0c3e1;
+  a{
+    display: block;
+    position: relative;
+    width: 100%;
+    text-align: center;
+    height: 40px;
+    border-radius: 4px;
+    overflow: hidden;
+    color: #fff;
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 40px;
+    &:hover, &:focus{
+      text-decoration: none;
+      color: #f1f1f1;
+    }
+  }
+}

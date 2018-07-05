@@ -1,0 +1,415 @@
+.section__medios {
+  position: relative;
+  width: 100%;
+  padding-top: 150px;
+  overflow: hidden;
+  @media #{$mobile-both} {
+    padding: 60px 0 0;
+  }
+  .bg_section{
+    position: absolute;
+    left: 0;
+    bottom: -1px;
+    width: 100%;
+    height: auto;
+    z-index: 5;
+    img{
+      display: block;
+      width: 100%;
+    }
+    @media #{$mobile-both} {
+      height: 630px;
+      background: {
+        image: url(/img/bg_section5.png);
+        position: center bottom;
+        repeat: no-repeat;
+        size: cover;
+      };
+      img{
+        display: none;
+      }
+    }
+    /* portrait */
+    @media #{$tablet-portrait} {
+      height: 760px;
+      background: {
+        image: url(/img/bg_section5-res.png);
+        position: center;
+        repeat: no-repeat;
+        size: cover;
+      };
+      img{
+        display: none;
+      }
+    }
+  }
+  .sm_top{
+    position: relative;
+    width: 100%;
+    padding: 60px 0 0;
+    @media #{$mobile-both} {
+      padding: 20px 0;
+    }
+    .b_left{
+      width: 100%;
+      float: left;
+      display: none;
+      img{
+        max-width: 100%;
+        display: block;
+        margin: 0 auto;
+      }
+      @media (min-width: 992px) {
+        display: block;
+      }
+    }
+    .b_right{
+      width: 100%;
+      float: left;
+      color: $black-light;
+      .title{
+        @include fontNunito(20px, 900);
+        color: $color-anda-primario;
+        margin: 30px 0 10px;
+        @media #{$mobile-both} {
+          font-size: 16px;
+          margin-top: 0;
+        }
+      }
+      br{
+        display: none;
+      }
+      .img-resp{
+        display: block;
+        @media #{$mobile-both} {
+          margin: 15px 0;
+          height: 315px;
+        }
+        @media #{$tablet-both} {
+          margin: 15px 0;
+          height: 315px;
+        }
+        @media (min-width: 768px) {
+          margin: 0 auto;
+        }
+        @media (min-width: 992px) {
+          display: none;
+        }
+      }
+      .btn--link{
+        display: inline-block;
+        *display: inline;
+        padding: 0;
+        color: $color-anda-primario;
+        @include fontNunito(20px, 700);
+        img{
+          width: 39px;
+          height: auto;
+          margin-right: 10px;
+        }
+      }
+      .download-app{
+        display: inline-block;
+        *display: inline;
+        width: 135px;
+        height: 40px;
+        a{
+          padding: 0;
+          background-color: transparent;
+          display: block;
+          height: 40px;
+          &:hover, &:focus{
+            text-decoration: none;
+            background-color: transparent;
+          }
+          img{
+            display: block;
+            width: 100%;
+          }
+        }
+        & + .download-app{
+          margin-left: 10px;
+        }
+        @media #{$mobile-both} {
+          width: 125px;
+        }
+      }
+    }
+    @media (min-width: 992px) {
+      .b_left{
+        width: 500px;
+      }
+      .b_right{
+        width: 400px;
+        margin-left: 30px;
+        br{
+          display: block;
+        }
+        .title{
+          margin-top: 0;
+        }
+      }
+    }
+    @media (min-width: 1200px) {
+      .b_left{
+        width: 600px;
+      }
+      .b_right{
+        width: 400px;
+        margin-left: 80px;
+      }
+    }
+  }
+  .sm_bottom{
+    position: relative;
+    width: 100%;
+    padding: 150px 0 70px;
+    @media #{$mobile-both} {
+      padding-top: 30px;
+    }
+  }
+  .section__content{
+    position: relative;
+    z-index: 20;
+    margin: 0 auto;
+    .section__title{
+      color: $color-anda-primario;
+      position: relative;
+      h3{
+        @include fontNunito(20px, 900);
+        margin: 0 0 10px;
+      }
+      @media #{$mobile-both} {
+        h3{
+          font-size: 16px;
+        }
+      }
+    }
+    .slide__medios{
+      width: 730px;
+      margin: 0 auto;
+      /* portrait */
+      @media #{$tablet-portrait} {
+        width: 630px;
+      }
+      @media #{$mobile-both} {
+        width: 100%;
+        margin: 0 auto;
+      }
+      @medio (min-width: 992px) {
+        width: 800px;
+      }
+    }
+    .mgtop40{
+      padding-top: 75px;
+    }
+    .slide__inner{
+      position: relative;
+      width: 730px;
+      min-height: 220px;
+      padding: 0 34px;
+      border-radius: 10px;
+      background-color: #fff;
+      box-shadow: 0 10px 20px rgba(0,0,0,.3);
+      /* portrait */
+      @media #{$tablet-portrait} {
+        width: 630px;
+      }
+      @media #{$mobile-both} {
+        width: 280px;
+        margin: 0 auto;
+      }
+      @medio (min-width: 992px) {
+        width: 800px;
+      }
+      .slide__control{ 
+        position: absolute;
+        width: 100%;
+        display: block;
+        top: 50%;
+        height: 32px;
+        left: 0;
+        right: 0;
+        margin-top: -15px;
+        .control{
+          position: absolute;
+          width: 32px;
+          height: 32px;
+          &:hover, &:focus{
+            cursor: pointer;
+          }
+          img{
+            display: block;
+            width: 100%;
+          }
+          &.control--prev{
+            left: -15px;
+          }
+          &.control--next{
+            right: -15px;
+          }
+        }
+      }
+      .slide__item{
+        text-align: left;
+        padding-top: 30px;
+        padding-bottom: 30px;
+        position: relative; 
+        min-height: 200px;
+        .btn--post{
+          position: absolute;
+          bottom: 5px;
+          font-weight: 900;
+          font-family: 'Nunito', sans-serif;
+          right: 5px;
+          color: $color-anda-primario;
+          font-size: 12px;
+          &:hover, &:focus{
+            background-color: transparent;
+          }
+        }
+        & + .slide__item{
+          &:after{
+            content: "";
+            width: 1px;
+            height: 150px;
+            background-color: #999;
+          }
+        }
+        .name__medio{
+          color: #3a3a3a;
+          font-size: 11px;
+          font-weight: 700;
+          font-family: 'Nunito', sans-serif;
+          margin: 0 0 4px;
+        }
+        .title__medio{
+          color: $color-anda-primario;
+          font-size: 13px;
+          font-weight: 900;
+          font-family: 'Nunito', sans-serif;
+        }
+        .description__medio{
+          color: #999;
+          font-size: 11px;
+        }
+      }
+    }
+    .content__form{
+      p{
+        color: #3a3a3a;
+        margin-bottom: 15px;
+        @media #{$mobile-both} {
+          font-size: 12px;
+        }
+      }
+      .b_auto{
+        width: 480px;
+        margin: 0 auto;
+      }
+      .invalidInput{
+        font-size: 12px;
+        color: #333;
+        padding-left: 12px;
+      }
+      .row{
+        margin-left: -4px;
+        margin-right: -4px;
+        .col-xs-6, .col-xs-12{
+          padding: 0 4px;
+        }
+      }
+      .ui-textbox{
+        margin-bottom: 0;
+      }
+      .ui-textbox__input{
+      }
+      .ui-textbox__input,
+      .ui-textbox__textarea {
+        color: #000;
+        font-size: 12px;
+        padding: 6px 12px;
+        height: 32px;
+      }
+      .ui-textbox__textarea{
+        margin-top: 8px;
+        height: 100px !important;
+        // 999999
+      }
+      .ui-button{
+        margin-top: 15px;
+        padding: 8px 18px;
+        color: #fff;
+        @include borderRadius(6px);
+        @include fontNunito(14px, 900);
+        background-color: $color-anda-primario;
+      }
+      @media #{$tablet-portrait} {
+        width: 100%;
+        .section__title{
+          margin-top: 15px;
+          text-align: center;
+        }
+        .text-right{
+          text-align: center;
+        }
+      }
+      @media #{$mobile-both} {
+        width: 100%;
+        .b_auto{
+          width: 100%;
+          margin: 0 auto;
+        }
+        .section__title{
+          margin-top: 15px;
+          text-align: left;
+        }
+        .text-right{
+          text-align: center;
+        }
+        .input-mobile{
+          margin-top: 8px;
+        }
+      }
+    }
+    .content__partners{
+      float: right;
+      .b_partners{
+        display: block;
+        margin-top: 15px;
+        img{
+          display: block;
+          margin: 0 auto;
+        }
+      }
+      @media #{$tablet-portrait} {
+        width: 100%;
+        .b_partners{
+          height: 66px;
+          width: 595px;
+          margin-bottom: 15px;
+          background: {
+            image: url(/img/partners-res.png);
+            position: center;
+            repeat: no-repeat;
+            // size: cover;
+          };
+          img{
+            display: none;
+          }
+        }
+      }
+      @media #{$mobile-both} {
+        width: 100%;
+        .b_partners{
+          height: auto;
+          width: 100%;
+          margin-bottom: 15px;
+          img{
+            display: block;
+          }
+        }
+      }
+    }
+  }
+}
